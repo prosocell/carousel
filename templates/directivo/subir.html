@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+
+{% block title %}cargar imagen {% endblock %}
+
+{% block headers %}
+{% include 'nav-bar-dir.html' %}
+    <h1>subir imagen</h1>
+    
+{% endblock %}              
+
+{% block content %}
+
+	{% if mensaje %}
+	<div class="'alert alert-info" >
+		{{mensaje}}
+	</div>
+	{% endif %}
+
+	<h1>ACTUALIZAR IMAGEN PARA SLIDER</h1> <a href="{% url 'excel' %}"><h1>VER  IMAGENES </h1></a>
+
+	<form role="form" enctype="multipart/form-data" action="" method="POST" id="subir" >
+		{% csrf_token %}
+		{{lol.as_p }}
+		<p><button type="submit" class="save btn btn-default" >guardar</button></p>
+		
+	</form>
+
+	<!--{% if message %}
+	<div class="'alert alert-info" >
+		{{message}}
+	</div>
+	{% endif %}
+	<h1>ACTUALIZAR EXCEL</h1>
+	<form role="form" enctype="multipart/form-data" action="" method="POST" id="actualizar">
+		{% csrf_token %}
+		{{form1.as_p }}
+		<input name="uploadedfile" type="file" />
+		<p><button type="submit" class="save btn btn-default" >actualizar</button></p>
+	</form-->
+<!--
+	{% if message %}
+	<div class="'alert alert-info" >
+		{{message}}
+	</div>
+	{% endif %}
+	<h1>ACTUALIZAR COMUNICADO ALUMNO</h1>
+	<form role="form" enctype="multipart/form-data" action="" method="POST" id="actualizar">
+		{% csrf_token %}
+		{{form.as_p }}
+		<input name="uploadedfile" type="file" />
+		<p><button type="submit" class="save btn btn-default" >actualizar</button></p>
+	</form>
+
+	{% if message %}
+	<div class="'alert alert-info" >
+		{{message}}
+	</div>
+	{% endif %}
+	<h1>ACTUALIZAR COMUNICADO DOCENTE</h1>
+	<form role="form" enctype="multipart/form-data" action="" method="POST" id="actualizar">
+		{% csrf_token %}
+		{{form1.as_p }}
+		<input name="uploadedfile" type="file" />
+		<p><button type="submit" class="save btn btn-default" >actualizar</button></p>
+	</form-->
+
+	{% if message %}
+	<div class="'alert alert-info" >
+		{{message}}
+	</div>
+	{% endif %}
+	<h1>ACTUALIZAR COMUNICADO ESCOLARES</h1>
+	<form role="form" enctype="multipart/form-data" action="" method="POST" id="actualizar">
+		{% csrf_token %}
+		{{form.as_p }}
+		<input type="text" name="title" placeholder="Escribe el el titulo">
+		<input type="text" name="description" placeholder="Escribe la descripcion">
+		<select name="categoria" >
+			<option value="Di">Dibujo</option>
+			<option value="Ta">Taekwondo</option>
+			<option value="Ha">Hawaiano</option>
+			<option value="Da">Danza</option>
+			<option value="Ma" >Marimba</option>
+			<option value="Vc" >Vocalizacion y canto</option>
+			<option value="Ba" >Banda de guerra</option>
+			<option value="To" >Tochito</option>
+			<option value="Es" >Escolta</option>
+			<option value="Bas" >Basquetbol</option>
+			<option value="Fu" >Futbol</option>
+			<option value="Vo" >Voleibol</option>
+		</select>
+
+		<p><button type="submit" class="save btn btn-default" >actualizar</button></p>
+	</form>
+{% endblock %} 

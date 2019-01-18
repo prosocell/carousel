@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title %}programa de estudios{% endblock %}
+
+{% block background %}{% load static %}{% static '../static/img/' %}{% endblock %}
+
+{% block headers %}
+{% include 'nav-bar.html' %}
+
+    
+{% endblock %}              
+
+{% block content %}
+<a class="textlink link1" href=http://www.cobach.edu.mx/programa-de-estudios><h1>programa de estudios</h1></a>
+<span class=textheading3>
+	
+</span>
+<div class=row style=min-height:606px;width:1000px;>
+	<div class=extra style="margin:30px 50px 0px 83px;">
+		<div class=component style=width:867px;>
+			<div class=self style=width:867px;min-height:576px;>
+				<div style=height:576px; class="web-widget web-widget-document-viewer">
+					<iframe src="https://docs.google.com/viewer?embedded=true&amp;url=http%3A%2F%2Fcobach01.com.mx%2Fonewebmedia%2Fmapa%2520curricular.pdf" width=100% height=100% style=border:none;>
+						
+					</iframe>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+{% endblock %}

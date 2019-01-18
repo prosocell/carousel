@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block title %}boleta{% endblock %}
+
+{% block background %}{% endblock %}
+
+{% block headers %}
+{% include 'navbar-alu.html' %}
+  
+           
+    <div class="row project">   
+            <div class="col-lg-10 col-md-8" >
+                <h2 class="section-heading title">MI BOLETA :</h2>
+                
+            </div>
+    </div>
+  
+{% endblock %}              
+
+{% block content %}
+
+<h3>mi nombre </h3>
+ <select>
+  <option value="volvo">ENERO-JUNIO/2018</option>
+  <option value="saab">AGOSTO-DICIEMBRE/2018</option>
+  <option value="opel">ENERO-JUNIO/2019</option>
+  <option value="audi">AGOSTO-DICIEMBRE/2019</option>
+</select>
+ <table class="table table-bordered" >
+    <thead>
+        <tr>            
+            
+            <th>materia</th>
+            <th>calificacion</th>
+            
+        </tr>       
+    </thead>
+    <tbody>
+        <tr>
+           <td>materia</td>
+           <td>calificaci</td>
+            
+          
+        </tr>
+    </tbody>
+
+</table>
+ 
+{% endblock %}

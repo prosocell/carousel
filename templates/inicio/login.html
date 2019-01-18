@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% block title %}Iniciar sesión{% endblock %}
+{% block background %}{% endblock %}
+{% block headers %}
+    <h1>Iniciar sesion</h1>
+    <img  src="img/avatal.jpg' %}" alt="Login" align ="center">
+{% endblock %} 
+{% block content %}
+{% include 'nav-bar.html' %}
+<!--style>.errorlist{color:red;}</style>
+<main role="main">
+  <div class="container">
+    <div class="row mt-3">
+      <div class="col-md-9 mx-auto mb-5">
+        {% if 'register' in request.GET %}
+        <p style=" color:green;">Usuario registrado correctamente, inicie sesion porfavor</p>
+        {% endif %}
+        <form action="" method="post">{% csrf_token %}
+          
+          {% if form.non_field_errors %}
+            <p style="color:red">Usuario o contraseña incorrectos, prueba de nuevo.</p>
+          {% endif %}
+          <p>
+            <input type="text" name="username" autofocus maxlength="254" required
+              id="id_username" class="form-control" placeholder="Nombre de usuario"/>
+          </p>
+          <p>
+            <input type="password" name="password" required
+              id="id_password" class="form-control" placeholder="Contraseña"/>
+          </p>
+          <p><input type="submit" class="btn btn-primary btn-block" value="Acceder"></p>
+        </form>
+        <p>
+            ¿Ha olvidado su contraseña?, restaurela <a href="">aqui</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</main-->
+<!--inicio de sesion-->
+<div class="container" >
+   <div class="col-md-4"></div>
+   <div class="col-md-4" class="input-group">
+      <section class="login-form">
+  <form method="post" role="login"  enctype="multipart/form-data" >
+    <img src="../static/img/cobach01.jpg" class="img-responsive">
+    {{form.as_p}}
+    <input type="text" name="password_anterior" required="" id="id_password" class="form-control" placeholder="contraseña anterior"/>
+    <input type="text" name="nueva_password" required="" id="id_password" class="form-control" placeholder="contraseña nueva"/>
+    <input type="text" name="nueva_password" required="" id="id_password" class="form-control" placeholder="nueva contraseña">
+    <div class="pwstrength_viewport_progress"></div>
+    <button type="submit" name="inicio" class="btn btn-lg btn-primary btn-block"> cambiar</button>
+    <div>
+      <a href="#">reset password</a>
+    </div>
+      </form>
+  <div class="form-links">
+          <a href="#"> plantel 01</a>
+        </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}{% endblock %}
+
+{% block background %}{% load static %}{% static '../static/img/' %}{% endblock %}
+
+{% block headers %}
+{% include "nav-bar.html" %}
+     <h1>Calendario</h1>
+    <!-- <span class="subheading">Ingeniero en Sistemas Computacionales</span>-->
+    
+{% endblock %}              
+
+{% block content %}
+
+<span>
+    <img src="../static/img/calendario.jpg" alt="calendario2018" width="846" height="653.42" style="display:block;">
+</span>
+{% endblock %}
+

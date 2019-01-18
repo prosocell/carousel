@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}{% endblock %}
+
+{% block background %}{% load static %}{% static '../static/img/' %}{% endblock %}
+
+{% block headers %}
+{% include "nav-bar.html" %}
+     <h1>Mision y vision</h1>
+    <!-- <span class="subheading">Ingeniero en Sistemas Computacionales</span>-->
+    
+{% endblock %}              
+
+{% block content %}
+
+
+
+<h2>Mision</h2>
+<br>
+<p>Formar  jóvenes en el nivel medio superior, con una educación integral, para contribuir en su proyecto de vida.</p>
+<h2>Visión</h2>
+<br>
+<p>Ser una institución que atienda la demanda educativa con calidad y nos identifique como la mejor opción en el nivel medio superior.</p>
+{% endblock %}
+

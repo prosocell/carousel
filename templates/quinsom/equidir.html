@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}{% endblock %}
+
+{% block background %}{% load static %}{% static '../static/img/' %}{% endblock %}
+
+{% block headers %}
+{% include "nav-bar.html" %}
+     <h1>Equipo directivo</h1>
+    <!-- <span class="subheading">Ingeniero en Sistemas Computacionales</span>-->
+    
+{% endblock %}              
+
+{% block content %}
+<h2>Plantel 01 Tuxtla-Terán</h2>
+<h1>DIRECTOR</h1>
+<h3>Lic. Sergio Esteves Arcuri</h3>
+<h1>Subdirector de Plantel (Matutino)</h1>
+<h3>Lic. Ignacio Villarreal Santizo</h3>
+<h1>Subdirector de Plantel (Vespertino)</h1>
+<h3>Arq. Juan Alberto Bravo Vázquez</h3>
+{% endblock %}
+

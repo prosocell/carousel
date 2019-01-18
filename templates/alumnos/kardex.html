@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block title %}KARDEX{% endblock %}
+
+{% block background %}{% endblock %}
+
+{% block headers %}
+{% include 'navbar-alu.html' %}
+  
+        {% for projects2 in projects2 %}
+           
+    <div class="row project">   
+            <div class="col-lg-10 col-md-8" >
+                <h1 class="section-heading title">kardex: {{projects2.nombre}}</h1>
+                
+            </div>
+    </div>
+   {% endfor %}
+{% endblock %}              
+
+{% block content %} 
+<h1>kardex del alumno</h1>
+{% for projects2 in projects2 %}
+
+ <table class="table table-bordered" >
+    <thead>
+        <tr>            
+            <th>matricula</th>
+            <th>semestre</th>
+            <th>grupo</th>
+            <th>clave grupo</th>
+            <th>grado</th>
+            <th>turno</th>
+            <th>materia</th>
+            <th>calificacion</th>
+            <th>promedio parcial</th>
+            <th>promedio semestre</th>
+            <th>calificacion final</th>
+        </tr>       
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{projects2.matricula}}</td>
+            <td>{{projects2.semestre}}</td>
+            <td>{{projects2.clavegrupo}}</td>
+            <td>{{projects2.grupo}}</td>
+            <td>{{projects2.grado}}</td>
+            <td>{{projects2.turno}}</td>
+            <td>{{projects2.materia}}</td>
+            <td>{{projects2.calificaci}}</td>
+            <td>{{projects2.prompa}}</td>
+            <td>{{projects2.promsem}}</td>
+            <td>{{projects2.inasistenc}}</td>
+        </tr>
+    </tbody>
+
+</table>
+
+    
+{% endfor %}
+{% endblock %}

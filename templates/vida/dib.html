@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}DIBUJO{% endblock %}
+
+{% block background %}{% load static %}{% static '../static/img/' %}{% endblock %}
+
+{% block headers %}
+{% include 'nav-bar.html' %}
+<h2>comunicados DIBUJO</h2>
+    
+{% endblock %}              
+{% block content %}
+<h1>DIBUJO</h1>
+{% for projects3 in projects3 %}
+<!-- Proyecto -->
+    <div class="row project" >
+        <div class="col-lg-7 col-md-8">
+                <h1>{{projects3.title}}</h1>
+                <p>{{projects3.description}}</p>
+                <a href="{{projects3.image.url}}">Ver comunicado</a>
+        </div>  	
+    </div>
+         
+    {% endfor %}
+			
+{% endblock %}

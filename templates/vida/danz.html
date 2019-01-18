@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}DANZA{% endblock %}
+
+{% block background %}{% load static %}{% static '../static/img/' %}{% endblock %}
+
+{% block headers %}
+{% include 'nav-bar.html' %}
+<h2>comunicados DANZA</h2>
+    
+{% endblock %}              
+{% block content %}
+<h1>DANZA</h1>
+			{% for projects in projects %}
+<!-- Proyecto -->
+    <div class="row project" >
+        <div class="col-lg-7 col-md-8">
+                <h1>{{projects.title}}</h1>
+                <p>{{projects.description}}</p>
+                <a href="{{projects.image.url}}">Ver comunicado</a>
+        </div>  	
+    </div>
+{% endblock %}

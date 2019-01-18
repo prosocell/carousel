@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}BASQUETOL{% endblock %}
+
+{% block background %}{% load static %}{% static '../static/img/' %}{% endblock %}
+
+{% block headers %}
+{% include 'nav-bar.html' %}
+<h2>comunicados BASQUETOL</h2>
+    
+{% endblock %}              
+{% block content %}
+<h1>BASQUETOL</h1>
+{% for projects1 in projects1 %}
+<!-- Proyecto -->
+    <div class="row project" >
+        <div class="col-lg-7 col-md-8">
+                <h1>{{projects1.title}}</h1>
+                <p>{{projects1.description}}</p>
+                <a href="{{projects1.image.url}}">Ver comunicado</a>
+        </div>  	
+    </div>
+			
+{% endblock %}

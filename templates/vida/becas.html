@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}becas{% endblock %}
+
+{% block background %}{% load static %}{% static '../static/img/' %}{% endblock %}
+
+{% block headers %}
+{% include 'nav-bar.html' %}
+
+    
+{% endblock %}              
+
+{% block content %}
+<h1>becas</h1>
+
+<div class=row style=min-height:577px;width:1000px;padding-bottom:66px;>
+	<div class=extra style="margin:5px 54px 0px 88px;">
+		<div class=component style=width:858px;>
+			<div class=self style=width:858px;min-height:772px;>
+				<div style=height:772px; class="web-widget web-widget-document-viewer">
+					<iframe src="https://docs.google.com/viewer?embedded=true&amp;url=http%3A%2F%2Fcobach01.com.mx%2Fonewebmedia%2FPRESENTACION%2520DE%2520BECAS%2520PLANTEL%252001%2520COBASCH.pptm" width=100% height=100% style=border:none;>
+						
+					</iframe>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

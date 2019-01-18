@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}{% endblock %}
+
+{% block background %}{% load static %}{% static '../static/img/' %}{% endblock %}
+
+{% block headers %}
+{% include "nav-bar.html" %}
+     <h1>Proposito</h1>
+    <!-- <span class="subheading">Ingeniero en Sistemas Computacionales</span>-->
+    
+{% endblock %}              
+
+{% block content %}
+
+<span style="font-size:18px;">
+    <img src="../static/img/proposito.jpg" alt="proposito" width="450" height="252.15" style="display:block;">
+<p>
+    El Colegio de Bachilleres de Chiapas, es un Organismo Público
+    descentralizado de la Administración Pública Estatal, que tiene 
+    como objeto principal, proporcionar una educación calificada,
+    fortalecedora del progreso educativo y desarrollo de la Entidad.
+</p>
+</span>
+{% endblock %}
+

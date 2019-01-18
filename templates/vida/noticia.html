@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}noticia{% endblock %}
+
+{% block background %}{% load static %}{% static '../static/img/' %}{% endblock %}
+
+{% block headers %}
+{% include 'nav-bar.html' %}
+
+    
+{% endblock %}              
+
+{% block content %}
+<h1>Noticias Matutino y Vespertino</h1>
+<h2> Blog oficial de noticias del COBACH 01 <a href="">turno matutino</a> y <a href="">turno vespertino</a>
+</h2>
+<h2> Blog creado para publicar noticias del turno matutino del colegio de bachilleres de Chiapas Plantel 01 Tuxtla-Teran</h2>
+
+	
+				<div style=height:1000px; class="web-widget web-widget-document-viewer">
+					<iframe src=http://cobach01.com.mx/____impro/1/onewebmedia/22%20de%20junio.jpg?etag=W%2F%2237cc8-5b2bfeeb%22&sourceContentType=image%2Fjpeg&ignoreAspectRatio&resize=652%2B369&extract=0%2B0%2B651%2B369&quality=85></a>
+					</iframe>
+				</div>
+			
+{% endblock %}

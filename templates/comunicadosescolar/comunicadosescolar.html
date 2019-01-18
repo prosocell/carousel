@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}Comunicados escolares{% endblock %}
+
+{% block background %}{% load static %}{% static 'img/portfolio-bg.jpg' %}{% endblock %}
+
+{% block headers %}
+    <h1>Comunicados escolares</h1>
+    
+{% endblock %}              
+
+{% block content %}
+{% include 'navbar-doc.html' %}
+ 
+ {% for projects3 in projects3 %}
+<!-- Proyecto -->
+    <div class="row project" >
+        <div class="col-lg-7 col-md-8">
+                <h1>{{projects3.title}}</h1>
+                <p>{{projects3.description}}</p>
+                <a href="{{projects3.image.url}}">Ver comunicado</a>
+                 
+                <!-- <embed src="{{projects.archivo.url}}" type="application/pdf" width="800" height="600"></embed>-->
+                
+           <!-- <p><a href="http://google.com">Más información</a></p>-->
+        </div>  	
+    </div>
+         
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block title %}DATAPERSONAL{% endblock %}
+
+{% block background %}{% endblock %}
+
+{% block headers %}
+{% include 'navbar-alu.html' %}
+    {% for projects in projects %}
+    
+        
+    <div class="row project">   
+            <div class="col-lg-10 col-md-8" >
+                <h1 class="section-heading title">datos personales: {{projects.nombre}}</h1>
+                
+            </div>
+    </div>
+    {% endfor %}
+{% endblock %}              
+
+{% block content %}
+<h1>Datos del alumno</h1>
+{% for projects1 in projects1 %}
+<table class="table table-bordered" >
+    <thead>
+        <tr>
+            <th>Matricula</td>
+            <th>Nombre</th> 
+            <th>Apellido Paterno</th> 
+            <th>Apellido Materno</th> 
+            <th>Curp</th> 
+            <th>Telefono</th> 
+            <th>Grado</th>          
+            <th>Grupo</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{projects1.matricula}}</td>
+                <td>{{projects1.nombres}}</td>
+                <td>{{projects1.papellido}}</td>
+                <td>{{projects1.sapellido}}</td>
+                <td>{{projects1.curp}}</td>
+                <td>{{projects1.telcasa}}</td>
+                <td>{{projects1.grado}}</td>
+                <td>{{projects1.grupo}}</td>
+        </tr>
+    </tbody>
+
+</table>
+   
+
+
+    
+{% endfor %}
+
+{% endblock %}
